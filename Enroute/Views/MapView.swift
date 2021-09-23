@@ -41,7 +41,7 @@ struct MapView: UIViewRepresentable {
 
         func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
             let view = mapView.dequeueReusableAnnotationView(withIdentifier: "MapViewAnnotation") ??
-            MKPinAnnotationView(annotation: annotation, reuseIdentifier: "MapViewAnnotation")
+            MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MapViewAnnotation")
             view.canShowCallout = true
             return view
         }
